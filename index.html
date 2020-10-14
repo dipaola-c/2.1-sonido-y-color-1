@@ -4,7 +4,7 @@
 
 <head>
 
-	<script>
+<!--	<script>
 		//llamar a un programada
   window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
@@ -12,6 +12,7 @@
     audio.play();});
 	</script>
 	<!--a la ventana audio... -->
+
 	<style>
 		#cuadrado1 {
 			width: 100px;
@@ -67,24 +68,26 @@
 
 		//solo dice la animacion, pero no esta programada aqui. Parte de 0 y llega a 300. Cambia el fondo a azul
 
-		#audio {
+
+
+	#audio {
 			display: none;
 		}
 
+	
 		//escondo la etiqueta de audio
 	</style> <!-- cuadrad es CSS, siempre encerrado entre {} y cada línea termina en ; - Los numerales son id y las clases se marcan con un punto-->
 
-	<script>
 
-	</script>
 </head>
 <!--en el head no se imprime nada, sólo se muestra el estilo etc -->
 
 <body>
 	hello
 
-<audio src="https://github.com/dipaola-c/2.1-sonido-y-color-1/blob/master/SOUND21.WAV" autoplay loop></audio>
-
+<audio autoplay loop>
+  <source src="tp3_armonía.mp3" type="audio/mp3">
+</audio>
 
 	<div id="cuadrado1"> </div>
 
