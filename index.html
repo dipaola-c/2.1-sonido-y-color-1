@@ -1,64 +1,105 @@
-<!DOCTYPE html> <!--comentario, etiqueta <> relacionando con html -->
+<!DOCTYPE html>
+<!--comentario, etiqueta <> relacionando con html -->
 <html>
-  <head>
-    <style>
 
-#cuadrado1 {
-  width: 100px;
-  height: 100px;
-  background: red;
-  position: relative; 
-  animation: movin 5s infinite; //5segundos
-}
-#cuadrado2{
-  width: 100px;
-  height: 100px;
-  background: black;
-  position: relative; 
-  animation: movin2 10s infinite;
-  transform: translateZ(0) rotate(-45deg);
-  } 
-//por defecto position es fijo, por eso para moverlo había que liberarlo. Se usa para marcas de agua que son estáticas
-#cuadrado2::before,
-#cuadrado2::after {
-  border-radius: 50% 50% 0 0 / 37.5% 37.5% 0 0;
-}
+<head>
 
-@keyframes movin {
-0% {top: 0px;}
-50% {top: 50px; background: blue;}
-100% {top: 300px;}
-} 
+	<script>
+		//llamar a un programada
+  window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.7;
+    audio.play();});
+	</script>
+	<!--a la ventana audio... -->
+	<style>
+		#cuadrado1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			animation: movin 5s infinite; //5segundos
+		}
 
-@keyframes movin2 {
-0% {top: 0px;}
-50% {top: 50px; width: 100px; background: green;}
-100% {top: 300px; width: 2000px; border-radius: 50% 50% 50% 0 / 37.5% 37.5% 0 0;}
-}
+		#cuadrado2 {
+			width: 100px;
+			height: 100px;
+			background: black;
+			position: relative;
+			animation: movin2 10s infinite;
+			transform: translateZ(0) rotate(-45deg);
+		}
 
-//solo dice la animacion, pero no esta programada aqui. Parte de 0 y llega a 300. Cambia el fondo a azul
+		//por defecto position es fijo, por eso para moverlo había que liberarlo. Se usa para marcas de agua que son estáticas
+		#cuadrado2::before,
+		#cuadrado2::after {
+			border-radius: 50% 50% 0 0 / 37.5% 37.5% 0 0;
+		}
 
-#audio {display:none;} //escondo la etiqueta de audio
+		@keyframes movin {
+			0% {
+				top: 0px;
+			}
+			50% {
+				top: 50px;
+				background: blue;
+			}
+			100% {
+				top: 300px;
+			}
+		}
 
-    </style> <!-- cuadrad es CSS, siempre encerrado entre {} y cada línea termina en ; - Los numerales son id y las clases se marcan con un punto-->
+		@keyframes movin2 {
+			0% {
+				top: 0px;
+			}
+			50% {
+				top: 50px;
+				width: 100px;
+				background: green;
+			}
+			100% {
+				top: 300px;
+				width: 2000px;
+				border-radius: 50% 50% 50% 0 / 37.5% 37.5% 0 0;
+			}
+		}
 
-    <script></script>
-    </head> <!--en el head no se imprime nada, sólo se muestra el estilo etc -->
-  <body>
-    hello 
+		//solo dice la animacion, pero no esta programada aqui. Parte de 0 y llega a 300. Cambia el fondo a azul
+
+		#audio {
+			display: none;
+		}
+
+		//escondo la etiqueta de audio
+	</style> <!-- cuadrad es CSS, siempre encerrado entre {} y cada línea termina en ; - Los numerales son id y las clases se marcan con un punto-->
+
+	<script>
+
+	</script>
+</head>
+<!--en el head no se imprime nada, sólo se muestra el estilo etc -->
+
+<body>
+	hello
 
 
-<div id="audio">
-  <audio id="sonido1"
-  src="pegarlink.wav" preload="auto"> </audio>
-  </div>
+	<div id="audio">
+		<audio id="sonido1" src="https://raw.githubusercontent.com/zzigo/Colapso/colapso/FONDO.mp3" preload="auto"> </audio>
+	</div>
+
+	<div id="audio">
+		<audio id="sonido2" src="https://raw.githubusercontent.com/zzigo/Colapso/colapso/PLANETA1.mp3" preload="auto"> </audio>
+	</div>
 
 
-<div id="cuadrado1"> </div>
+	<div id="cuadrado1"> </div>
 
-<div id="cuadrado2"> </div>
+	<div id="cuadrado2"> </div>
 
-  </body> <!--dentro del body va el texto -->
+</body>
+<!--dentro del body va el texto -->
+
 </html>
 
 <!--ojo los comentarios-->
