@@ -4,8 +4,8 @@
 
 <head>
 
-<!--	<script>
-		//llamar a un programada
+<!--<script>
+
   window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
     audio.volume = 0.7;
@@ -83,15 +83,17 @@
 <!--en el head no se imprime nada, sólo se muestra el estilo etc -->
 
 <body>
-	hello
-
-<audio autoplay loop>
-  <source src="tp3_armonía.mp3" type="audio/mp3">
-</audio>
+hello
+<iframe src="audio.mp3" allow="autoplay" id="audio" style="display: none"> 
+  <p>Su navegador no es compatible con iframes</p> 
+  </iframe>
 
 	<div id="cuadrado1"> </div>
-
 	<div id="cuadrado2"> </div>
+
+<audio id="player" autoplay loop>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 <!--dentro del body va el texto -->
